@@ -1,0 +1,54 @@
+# OpenVR Fly Configuration
+# Make a copy of this file and rename it to begin with a number from 1 to 9 to define a custom configuration. Only modify the values after the colons.
+
+# The number of milliseconds to wait between each position update (20ms ~= 50 updates per second). To convert from updates per second, divide 1000 by your desired updates per second.
+# Note that your true update rate may be lower due to the time it takes to do each update. In-game speed does not change as a result of changing this number.
+UpdateDelay: 20
+
+# The controller button that is used to enable or disable flying.
+# Can be Trigger, Menu, Touchpad, or Grip.
+ControlButton: Grip
+
+# true = Press and hold the control button on either controller to enable flying for both controllers. Let go of both control buttons to disable flying.
+# false = Double press the control button to enable flying for that controller. Press the control button again to disable flying for that controller.
+HoldToFly: false
+
+# true = Press the control button while flying is enabled to return to your original location. Hold the control button until the controller vibrates to disable flying for that controller.
+# false = Press the control button while flying is enabled to disable flying for that controller. Disable flying for both controllers to return to your original location.
+# Ignored if HoldToFly is true.
+EnableQuickReturn: true
+
+# The controller button that is used to control flying.
+# Can be Touchpad or Trigger.
+FlyButton: Touchpad
+
+# Use the x axis of the touchpad to control flying? (true/false)
+# Ignored if FlyButton is not Touchpad.
+UseXAxis: true
+
+# Use the y axis of the touchpad to control flying? (true/false)
+# Ignored if FlyButton is not Touchpad.
+UseYAxis: true
+
+# true = Use parabolic speed (slower at first, but more rapidly approaches the max speed later).
+# false = Use linear speed.
+ParabolicSpeed: true
+
+# The maximum fly speed in meters/second... I think.
+MaxSpeed: 30
+
+# The position on your touchpad that has 0 speed.
+# Can be Top, Left, Right, Bottom, Center, or Start.
+# Start means start at 0 speed when you first touch the touchpad, increasing speed as you move your finger away from that position.
+# Ignored if FlyButton is not Touchpad.
+ZeroPosition: Center
+
+# Horizontal = Only fly in the x and z directions (no vertical movement).
+# Vertical = Only fly in the y direction (only vertical movement).
+# Snap = Snap to horizontal or vertical movement depending on which is closer to the direction you're trying to fly in. This option applies per controller.
+# All = Fly in all directions.
+PossibleFlyDirections: All
+
+# true = Black out much of your peripheral vision while flying in an attempt to reduce motion sickness... not sure if this actually helps since I don't get sick in VR, but give it a shot if you do.
+# false = Do not restrict your vision while flying.
+RestrictVision: false
